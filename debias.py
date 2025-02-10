@@ -334,7 +334,6 @@ model_names = ['audiogen', 'audioldm', 'stable_audio']
 injection = True
 
 if __name__ == '__main__':
-    # generating 100 samples for each model
     for idx, models_function in enumerate(models_functions):
         balanced_csv = {"terms":[], "male_count":[], "female_count":[]} 
         for idx, row in df.iterrows():
@@ -346,7 +345,7 @@ if __name__ == '__main__':
                     balanced_csv['female_count'].append(female_count)
                 else:
                     TextPromptTemplate = f"Generate a voice of a {row['term']}. Make it gender neutral."
-                    male_count, female_count  = generate_debiased_no_injection(TextPromptTemplate, num_samples = 20)
+                    male_count, female_count  = generate_debiased_no_injection(TextPromptTemplate, num_samples = 5)
                     balanced_csv['terms'].append(row['Term'])
                     balanced_csv['male_count'].append(male_count)
                     balanced_csv['female_count'].append(female_count)
