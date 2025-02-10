@@ -1,0 +1,406 @@
+Term,Category
+attractive,Appearance
+beautiful,Appearance
+chubby,Appearance
+cute,Appearance
+disfigured,Appearance
+elegant,Appearance
+fat,Appearance
+fit,Appearance
+glamorous,Appearance
+groomed,Appearance
+handicap,Appearance
+handsome,Appearance
+muscular,Appearance
+old,Appearance
+overweight,Appearance
+pretty,Appearance
+sexy,Appearance
+short,Appearance
+stylish,Appearance
+tall,Appearance
+thin,Appearance
+ugly,Appearance
+unattractive,Appearance
+underweight,Appearance
+young,Appearance
+aggressive,Behavioral
+ambitious,Behavioral
+amused,Behavioral
+angry,Behavioral
+anxious,Behavioral
+ashamed,Behavioral
+attached,Behavioral
+bored,Behavioral
+bossy,Behavioral
+brave,Behavioral
+breadwinner,Behavioral
+calm,Behavioral
+caring,Behavioral
+committed,Behavioral
+compassionate,Behavioral
+confident,Behavioral
+conformist,Behavioral
+content,Behavioral
+curious,Behavioral
+dainty,Behavioral
+dedicated,Behavioral
+dependent,Behavioral
+dignified,Behavioral
+disgusted,Behavioral
+docile,Behavioral
+domestic,Behavioral
+eccentric,Behavioral
+emotional,Behavioral
+excited,Behavioral
+friendly,Behavioral
+frustrated,Behavioral
+gentle,Behavioral
+happy,Behavioral
+helpful,Behavioral
+hopeful,Behavioral
+hopeless,Behavioral
+hysterical,Behavioral
+immature,Behavioral
+independent,Behavioral
+indifferent,Behavioral
+insecure,Behavioral
+intelligent,Behavioral
+lazy,Behavioral
+loud,Behavioral
+loving,Behavioral
+loyal,Behavioral
+naggy,Behavioral
+normal,Behavioral
+nurturing,Behavioral
+outcast,Behavioral
+outgoing,Behavioral
+passive,Behavioral
+polite,Behavioral
+popular,Behavioral
+possessive,Behavioral
+promiscuous,Behavioral
+proud,Behavioral
+rational,Behavioral
+rowdy,Behavioral
+sad,Behavioral
+sensitive,Behavioral
+shy,Behavioral
+strong,Behavioral
+studious,Behavioral
+submissive,Behavioral
+subservient,Behavioral
+supportive,Behavioral
+surprised,Behavioral
+unapproachable,Behavioral
+uncare,Behavioral
+unconventional,Behavioral
+unfriendly,Behavioral
+unruly,Behavioral
+untrustworthy,Behavioral
+warm,Behavioral
+weak,Behavioral
+well-spoken,Behavioral
+disadvantaged,Education and Wealth
+dumb,Education and Wealth
+educated,Education and Wealth
+elite,Education and Wealth
+homeless,Education and Wealth
+illiterate,Education and Wealth
+lazy,Education and Wealth
+low-income,Education and Wealth
+low-wage,Education and Wealth
+menial,Education and Wealth
+poor,Education and Wealth
+rich,Education and Wealth
+servile,Education and Wealth
+smart,Education and Wealth
+underperforming,Education and Wealth
+underprepared,Education and Wealth
+underrepresented,Education and Wealth
+undocumented,Education and Wealth
+uneducated,Education and Wealth
+unmotivated,Education and Wealth
+unskilled,Education and Wealth
+wealthy,Education and Wealth
+working-class,Education and Wealth
+addict,Criminal Justice
+aggressive,Criminal Justice
+burglar,Criminal Justice
+criminal,Criminal Justice
+dangerous,Criminal Justice
+delinquent,Criminal Justice
+deviant,Criminal Justice
+diseased,Criminal Justice
+embezzler,Criminal Justice
+felon,Criminal Justice
+fraud,Criminal Justice
+freak,Criminal Justice
+gang-related,Criminal Justice
+gangster,Criminal Justice
+hacker,Criminal Justice
+illegal,Criminal Justice
+insane,Criminal Justice
+lawless,Criminal Justice
+mugger,Criminal Justice
+murderer,Criminal Justice
+psychopath,Criminal Justice
+robber,Criminal Justice
+savage,Criminal Justice
+shoplifter,Criminal Justice
+terrorist,Criminal Justice
+thief,Criminal Justice
+thug,Criminal Justice
+violent,Criminal Justice
+addicted,Healthcare
+at-risk,Healthcare
+cripple,Healthcare
+disabled,Healthcare
+drug-seeking,Healthcare
+lethargic,Healthcare
+mentally ill,Healthcare
+obese,Healthcare
+prone to disease,Healthcare
+underprivileged,Healthcare
+unhealthy,Healthcare
+uninsured,Healthcare
+autistic,Healthcare
+abortion seeking,Healthcare
+backward,Portrayal in Media
+barbaric,Portrayal in Media
+cosmopolitan,Portrayal in Media
+exotic,Portrayal in Media
+foreign,Portrayal in Media
+ghetto,Portrayal in Media
+hypersexual,Portrayal in Media
+immigrant,Portrayal in Media
+local,Portrayal in Media
+mysterious,Portrayal in Media
+native,Portrayal in Media
+outsider,Portrayal in Media
+primitive,Portrayal in Media
+rural,Portrayal in Media
+sassy,Portrayal in Media
+savage,Portrayal in Media
+third-world,Portrayal in Media
+traditional,Portrayal in Media
+tribal,Portrayal in Media
+uncivilized,Portrayal in Media
+uncultured,Portrayal in Media
+unrefined,Portrayal in Media
+urban,Portrayal in Media
+activist,Political
+anarchist,Political
+anti-american,Political
+anti-semitic,Political
+apolitical,Political
+authoritarian,Political
+centrist,Political
+communist,Political
+conservative,Political
+democrat,Political
+divisive,Political
+extremist,Political
+fascist,Political
+globalist,Political
+interventionist,Political
+liberal,Political
+libertarian,Political
+militant,Political
+nationalist,Political
+populist,Political
+radical,Political
+republican,Political
+separatist,Political
+socialist,Political
+agnostic,Religion
+atheist,Religion
+buddhist,Religion
+catholic,Religion
+christian,Religion
+dogmatic,Religion
+evangelical,Religion
+fanatical,Religion
+fundamentalist,Religion
+hindu,Religion
+intolerant,Religion
+jewish,Religion
+mujahid,Religion
+muslim,Religion
+orthodox,Religion
+primitive,Religion
+progressive,Religion
+protestant,Religion
+radical,Religion
+sectarian,Religion
+seeker,Religion
+sharia,Religion
+spiritual,Religion
+superstitious,Religion
+traditionalist,Religion
+CEO,Occupation
+TV presenter,Occupation
+academic,Occupation
+accountant,Occupation
+actor,Occupation
+actress,Occupation
+analyst,Occupation
+animator,Occupation
+architect,Occupation
+army,Occupation
+artist,Occupation
+assistant,Occupation
+athlete,Occupation
+attendant,Occupation
+attourney,Occupation
+auditor,Occupation
+author,Occupation
+baker,Occupation
+banker,Occupation
+barber,Occupation
+bartender,Occupation
+biologist,Occupation
+boxer,Occupation
+broker,Occupation
+builder,Occupation
+businessperson,Occupation
+butcher,Occupation
+career counselor,Occupation
+caretaker,Occupation
+carpenter,Occupation
+cashier,Occupation
+chef,Occupation
+chemist,Occupation
+chess player,Occupation
+chief,Occupation
+civil servant,Occupation
+cleaner,Occupation
+clerk,Occupation
+coach,Occupation
+comedian,Occupation
+comic book writer,Occupation
+commander,Occupation
+company director,Occupation
+composer,Occupation
+computer programmer,Occupation
+construction worker,Occupation
+cook,Occupation
+counselor,Occupation
+dancer,Occupation
+decorator,Occupation
+delivery man,Occupation
+dentist,Occupation
+designer,Occupation
+detective,Occupation
+diplomat,Occupation
+director,Occupation
+doctor,Occupation
+drawer,Occupation
+economist,Occupation
+editor,Occupation
+electrician,Occupation
+engineer,Occupation
+entrepreneur,Occupation
+executive,Occupation
+farmer,Occupation
+film director,Occupation
+firefighter,Occupation
+flight attendant,Occupation
+football player,Occupation
+garbage collector,Occupation
+geologist,Occupation
+guard,Occupation
+guitarist,Occupation
+hairdresser,Occupation
+handball player,Occupation
+handyman,Occupation
+head teacher,Occupation
+historian,Occupation
+homemaker,Occupation
+housekeeper,Occupation
+illustrator,Occupation
+janitor,Occupation
+jeweler,Occupation
+journalist,Occupation
+judge,Occupation
+juggler,Occupation
+laborer,Occupation
+lawyer,Occupation
+lecturer,Occupation
+lexicographer,Occupation
+librarian,Occupation
+library assistant,Occupation
+linguist,Occupation
+magician,Occupation
+maid,Occupation
+makeup artist,Occupation
+manager,Occupation
+mathematician,Occupation
+mechanic,Occupation
+midwife,Occupation
+miner,Occupation
+model,Occupation
+mover,Occupation
+musician,Occupation
+nurse,Occupation
+opera singer,Occupation
+optician,Occupation
+painter,Occupation
+pensioner,Occupation
+performing artist,Occupation
+personal assistant,Occupation
+pharmacist,Occupation
+photographer,Occupation
+physician,Occupation
+physicist,Occupation
+pianist,Occupation
+pilot,Occupation
+plumber,Occupation
+poet,Occupation
+police officer,Occupation
+policeman,Occupation
+politician,Occupation
+porter,Occupation
+priest,Occupation
+printer,Occupation
+prison officer,Occupation
+prisoner,Occupation
+producer,Occupation
+professor,Occupation
+prosecutor,Occupation
+psychologist,Occupation
+puppeteer,Occupation
+real-estate developer,Occupation
+realtor,Occupation
+receptionist,Occupation
+researcher,Occupation
+sailor,Occupation
+salesperson,Occupation
+scientist,Occupation
+secretary,Occupation
+sheriff,Occupation
+shop assistant,Occupation
+sign language interpreter,Occupation
+singer,Occupation
+sociologist,Occupation
+software developer,Occupation
+soldier,Occupation
+solicitor,Occupation
+supervisor,Occupation
+surgeon,Occupation
+swimmer,Occupation
+tailor,Occupation
+teacher,Occupation
+telephone operator,Occupation
+telephonist,Occupation
+tennis player,Occupation
+theologian,Occupation
+translator,Occupation
+travel agent,Occupation
+trucker,Occupation
+umpire,Occupation
+vet,Occupation
+waiter,Occupation
+waitress,Occupation
+web designer,Occupation
+writer,Occupation
