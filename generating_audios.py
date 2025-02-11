@@ -7,6 +7,7 @@ from audiocraft.data.audio import audio_write
 import pandas as pd 
 from diffusers import AudioLDMPipeline, StableAudioPipeline
 import soundfile as sf
+import spacy 
 
 # set the huggingface token
 os.environ["HF_TOKEN"] = 'your_hf_token'
@@ -22,6 +23,9 @@ directories = ['./audiogen', './audioldm', './stable_audio']
 for directory in directories:
     if not os.path.isdir(directory):
         os.mkdir(directory)
+
+# loading the library for noun/adjective detection
+nlp = spacy.load("en_core_web_sm")
 
 # loading AudioGen
 audiogen_model = AudioGen.get_pretrained('facebook/audiogen-medium', device='cuda')
@@ -40,14 +44,22 @@ generator = torch.Generator("cuda").manual_seed(0)
 # loading categories and terms
 df = pd.read_csv('./Bias_Types_Term_Category.csv')
 
+def generate_sentence(word):
+    doc = nlp(word)
+    for token in doc:
+        if token.pos_ == "NOUN":
+            return f"A {word} taking"
+        else:
+            return f"A {word} person talking"
+
 def generate_and_save_audiogen(term, start_idx=0, number=100):
-  descriptions = [template.format(term) for _ in range(number)]
+  descriptions = [generate_sentence(term) for _ in range(number)]
   wav = audiogen_model.generate(descriptions)
   for idx, one_wav in enumerate(wav):
     audio_write(f'./audiogen/{term}_{idx+start_idx}', one_wav.cpu(), audiogen_model.sample_rate, strategy="loudness", loudness_compressor=True)
 
 def generate_and_save_audioldm(term, start_idx=0, number=100):
-    descriptions = [template.format(term) for _ in range(number)]
+    descriptions = [generate_sentence(term) for _ in range(number)]
     audios = audioldm_pipe(
         descriptions,
         audio_length_in_s=5.0,
@@ -60,7 +72,7 @@ def generate_and_save_audioldm(term, start_idx=0, number=100):
         scipy.io.wavfile.write(f'./audio_ldm/{term}_{idx+start_idx}', rate=16000, data=one_wav)
 
 def generate_and_save_stableaudio(term, start_idx=0, number=100, batch_size=10):
-    descriptions = [template.format(term) for _ in range(number)]
+    descriptions = [generate_sentence(term) for _ in range(number)]
 
     for batch_start in range(0, len(descriptions), batch_size):
         batch_descriptions = descriptions[batch_start:batch_start + batch_size]

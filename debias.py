@@ -8,6 +8,7 @@ import pandas as pd
 from diffusers import AudioLDMPipeline, StableAudioPipeline
 import soundfile as sf
 import random
+import spacy
 
 ## This script is based on the https://github.com/TaoRuijie/ECAPA-TDNN/blob/main/model.py
 ## I made some changes to the original code for training a binary classifier.
@@ -183,11 +184,20 @@ class ECAPA_gender(nn.Module, PyTorchModelHubMixin):
             _, pred = output.max(1)
         return self.pred2gender[pred.item()]
     
+
+# loading the library for noun/adjective detection
+nlp = spacy.load("en_core_web_sm")
+    
 gender_detect_model = ECAPA_gender.from_pretrained("JaesungHuh/voice-gender-classifier")
 gender_detect_model.eval()
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 gender_detect_model.to(device)
+
+def check_for_noun(word):
+    doc = nlp(word)
+    for token in doc:
+        return token.pos_ == "NOUN"
 
 def check_gender(path):
   return gender_detect_model.predict(path, device)
@@ -331,6 +341,7 @@ def generate_debiased_no_injection(generate_audio_function, prompt, num_samples=
 models_functions = [generate_and_save_audiogen, generate_and_save_audioldm, generate_and_save_stableaudio]
 model_names = ['audiogen', 'audioldm', 'stable_audio']
 
+# use prompt injection or not
 injection = True
 
 if __name__ == '__main__':
@@ -339,12 +350,12 @@ if __name__ == '__main__':
         for idx, row in df.iterrows():
             if row['Category'] != 'Religion' and row['Category'] != 'Portrayal in Media':
                 if injection:
-                    _, male_count, female_count = generate_balanced_voices(models_function, f"a {row['Term']}" + " {} talking", 0.5, 5, 50)
+                    _, male_count, female_count = generate_balanced_voices(models_function, f"a {row['Term']} {"" if check_for_noun(row['Term']) else "person"}" + " {} talking", 0.5, 5, 50)
                     balanced_csv['terms'].append(row['Term'])
                     balanced_csv['male_count'].append(male_count)
                     balanced_csv['female_count'].append(female_count)
                 else:
-                    TextPromptTemplate = f"Generate a voice of a {row['term']}. Make it gender neutral."
+                    TextPromptTemplate = f"Generate a voice of a {row['term']} {"" if check_for_noun(row['Term']) else "person"}. Make it gender neutral."
                     male_count, female_count  = generate_debiased_no_injection(TextPromptTemplate, num_samples = 5)
                     balanced_csv['terms'].append(row['Term'])
                     balanced_csv['male_count'].append(male_count)
